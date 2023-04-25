@@ -20,8 +20,8 @@ public class orangeSignUp {
         driver.manage().window().maximize();
         System.out.println(driver.getCurrentUrl());
         driver.findElement(By.xpath("(//button[@class='btn btn-ohrm btn-contact-sales'][normalize-space()='Book a Free Demo'])[2]")).click();
-        driver.findElement(By.xpath("//input[@id='Form_getForm_FullName']")).sendKeys("Deji");
-        driver.findElement(By.xpath("//input[@id='Form_getForm_Email']")).sendKeys("interpercelservice@gmail.com");
+        driver.findElement(By.xpath("//input[@id='Form_getForm_FullName']")).sendKeys("yourname");
+        driver.findElement(By.xpath("//input[@id='Form_getForm_Email']")).sendKeys("Your email");
         driver.findElement(By.xpath("//input[@id='Form_getForm_Contact']")).sendKeys("7777777");
         WebElement dropdown = driver.findElement(By.xpath("//select[@id='Form_getForm_Country']"));
 //        dropdown options and how to select from it
@@ -32,5 +32,8 @@ public class orangeSignUp {
                  option.click();
          }
          driver.findElement(By.xpath("//iframe[@title='reCAPTCHA']")).click();
+         Thread.sleep(6000);
+         driver.findElement(By.xpath("//input[@id='Form_getForm_action_submitForm']"));
+        System.out.println(driver.getCurrentUrl());
     }
 }
